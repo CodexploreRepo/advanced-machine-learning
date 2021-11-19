@@ -73,11 +73,16 @@
     - **Linear Regression**: assume linear dependence
     - **Non-linear Regression**: Time series forecasting
 - **Unsupervised learning**: Training data does not include desired outputs - Given (input, ~~correct output~~), (input, ?)
-  - Clustering: Find a set of prototypes representing the data
-  - Dimension Reduction / Principal Components: Find a subspace representing the data
-  - Independent components / dictionary learning: Find(small)setoffactorsforobservation
-  - Novelty/Anomaly detection: Find the odd one out
+  - *Clustering*: Find a set of prototypes representing the data
+    - E.g.: Marketing segmentation, group of insurance interests, web news, pictures, city-planning 
+  - *Dimension Reduction / Principal Components*: Find a subspace representing the data
+    - E.g.: Principal Component Analysis (PCA), Non-Linear Embedding
+  - *Independent components / dictionary learning*: Find (small) set of factors for observation
+  - *Novelty/Anomaly detection*: Identification of new or unknown patterns
+    - Parametric approach
+    - Non-parametric approach
 - **Semi-supervised learning**: Training data includes a few desired outputs
-- **Reinforcement learning**: Rewards from sequence of actions
+- **Reinforcement learning**: Take an action, environment responds, take new action
+  - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
 
 [(Back to top)](#table-of-contents)
