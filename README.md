@@ -24,7 +24,7 @@
   - e.g. Credit Risk Analysis
     - *Learned rules*: 
       - If Other-Delinquent-Account > 2 Number-Delinquent-Billing-Cycles > 1 &#8594; Profitable-Customer ? = no
-      - If Other-Delinquent-Account = 0 (Income > $30K or Years-of-Credit > 3)  &#8594; Then Profitable-Customer ? = yes
+      - If Other-Delinquent-Account = 0 (Income > $30K or Years-of-Credit > 3) &#8594; Then Profitable-Customer ? = yes
 - **Software Applications** that are hard to program by hand: Speech recognition, Image classification, Autonomous driving
   - e.g. ALVINN: an autonomous land vehicle in a neural network (1989); Google’s self-driving car; Image Tagging/Captioning
 - **User Modeling**: Automatic Recommender Systems
@@ -32,5 +32,38 @@
 ## 1.3. Machine Learning Concepts
 
 <p align="center"><img width="350" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/142563823-c9718200-2490-493b-92a9-5a0ea89a9d9c.png"></p>
+
+- **Designing a Learning System**: Choose the *training experience* &#8594; Choose exactly what is to be learned, i.e. the `target function` &#8594; Choose how to represent the target function &#8594; Choose a *learning algorithm* to infer the target function from the experience
+- **Every machine learning algorithm** has three components: 
+  - *Representation*:
+    - Decision trees
+    - Sets of rules / Logic programs
+    - Instances
+    - Graphical models (Bayes/Markov nets)
+    - Neural networks
+    - Support vector machines
+    - Model ensembles
+  - *Evaluation*:
+    - Accuracy
+    - Precision and recall
+    - Squared error
+    - Likelihood
+    - Posterior probability
+    - Cost / Utility
+    - Margin
+    - Entropy
+    - K-L divergence
+  - *Optimization*:
+    - Combinatorial optimization
+      - E.g.: Greedy search
+    - Convex optimization
+      - E.g.: Gradient descent
+    - Constrained optimization
+      - E.g.: Linear programming
+- **Types of Machine Learning**: 
+  - **Supervised (inductive) learning**: Training data includes desired outputs
+  - **Unsupervised learning**: Training data does not include desired outputs
+  - **Semi-supervised learning**: Training data includes a few desired outputs
+  - **Reinforcement learning**: Rewards from sequence of actions
 
 [(Back to top)](#table-of-contents)
