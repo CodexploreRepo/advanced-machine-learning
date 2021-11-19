@@ -33,7 +33,9 @@
 
 <p align="center"><img width="350" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/142563823-c9718200-2490-493b-92a9-5a0ea89a9d9c.png"></p>
 
-- **Designing a Learning System**: Choose the *training experience* &#8594; Choose exactly what is to be learned, i.e. the `target function` &#8594; Choose how to represent the target function &#8594; Choose a *learning algorithm* to infer the target function from the experience
+### 1.3.1. Designing a Learning System: 
+- Choose the *training experience* &#8594; Choose exactly what is to be learned, i.e. the `target function` &#8594; Choose how to represent the target function &#8594; Choose a *learning algorithm* to infer the target function from the experience
+### 1.3.2. Machine Learning algorithm
 - **Every machine learning algorithm** has three components: 
   - *Representation*:
     - Decision trees
@@ -60,10 +62,10 @@
       - E.g.: Gradient descent
     - Constrained optimization
       - E.g.: Linear programming
-- **Types of Machine Learning**: 
-  - **Supervised (inductive) learning**: Training data includes desired outputs
-  - **Unsupervised learning**: Training data does not include desired outputs
-  - **Semi-supervised learning**: Training data includes a few desired outputs
-  - **Reinforcement learning**: Rewards from sequence of actions
+### 1.3.3. Types of Machine Learning: 
+- **Supervised (inductive) learning**: Training data includes desired outputs
+- **Unsupervised learning**: Training data does not include desired outputs
+- **Semi-supervised learning**: Training data includes a few desired outputs
+- **Reinforcement learning**: Rewards from sequence of actions
 
 [(Back to top)](#table-of-contents)
