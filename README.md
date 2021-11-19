@@ -72,7 +72,7 @@
     - Given input x, find y in real-valued space R (R^d)
     - **Linear Regression**: assume linear dependence
     - **Non-linear Regression**: Time series forecasting
-- **Unsupervised learning**: Training data does not include desired outputs
+- **Unsupervised learning**: Training data does not include desired outputs - Given (input, ~~correct output~~), (input, ?)
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Rewards from sequence of actions
 
