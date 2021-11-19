@@ -35,6 +35,16 @@
 
 ### 1.3.1. Designing a Learning System
 - Choose the *training experience* &#8594; Choose exactly what is to be learned, i.e. the `target function` &#8594; Choose how to represent the target function &#8594; Choose a *learning algorithm* to infer the target function from the experience
+#### 1.3.1.1. Evaluation of Learning System
+- **Experimental**
+  - Conduct controlled cross-validation experiments to compare various methods on a variety of benchmark datasets.
+  - Gather data on their performance, e.g. test accuracy, training- time, testing-time.
+  - Analyze differences for statistical significance.
+- **Theoretical**: Analyze algorithms mathematically and prove theorems about their
+  - Computational complexity
+  - Ability to fit training data
+  - Sample complexity (number of training examples needed to learn an accurate function)
+
 ### 1.3.2. Machine Learning Algorithm
 - **Every machine learning algorithm** has three components: 
   - *Representation*:
@@ -88,6 +98,11 @@
 ## 1.4. Deep Learning
 ### 1.4.1. Shallow Learning vs Deep Learning
 <p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/142584149-bc990035-e2e6-4dab-80a0-82119ecc1e99.png"></p>
+
+### 1.4.2. Why Deep Learning ?
+- A family of machine learning algorithms based on multi-layer networks
+- Inspired by the biological architecture of brain in neuroscience
+<p align="center"><img width="600" alt="Screenshot 2021-11-19 at 15 43 24" src="https://user-images.githubusercontent.com/64508435/142585189-0b477b90-5159-4152-bef1-3a478a5ce70c.png"></p>
 
 
 [(Back to top)](#table-of-contents)
