@@ -6,6 +6,7 @@
   - [1.1. Why study Machine Learning](#11-why-study-machine-learning)
   - [1.2. Niches for Machine Learning](#12-niches-for-machine-learning)
   - [1.3. Machine Learning Concepts](#13-machine-learning-concepts)
+  - [1.4. Deep Learning](#14-deep-learning)
 
 
 # 1. Introduction
@@ -30,7 +31,6 @@
 - **User Modeling**: Automatic Recommender Systems
 
 ## 1.3. Machine Learning Concepts
-
 <p align="center"><img width="350" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/142563823-c9718200-2490-493b-92a9-5a0ea89a9d9c.png"></p>
 
 ### 1.3.1. Designing a Learning System
@@ -84,5 +84,10 @@
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Take an action, environment responds, take new action
   - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
+
+## 1.4. Deep Learning
+### 1.4.1. Shallow Learning vs Deep Learning
+<p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/142584149-bc990035-e2e6-4dab-80a0-82119ecc1e99.png"></p>
+
 
 [(Back to top)](#table-of-contents)
