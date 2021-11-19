@@ -64,6 +64,14 @@
       - E.g.: Linear programming
 ### 1.3.3. Types of Machine Learning
 - **Supervised (inductive) learning**: Training data includes desired outputs
+  - *Classification*: discrete output
+    - Binary Classification: input x, find y in {-1, +1}
+    - Multi-class classification: input x, find y in {1, ..., k}
+      - E.g.: Digit Recognition: Map each image x to one of ten digits `[0,...,9]` 
+  - *Regression*: continuous output
+    - Given input x, find y in real-valued space R (R^d)
+    - **Linear Regression**: assume linear dependence
+    - **Non-linear Regression**: Time series forecasting
 - **Unsupervised learning**: Training data does not include desired outputs
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Rewards from sequence of actions
