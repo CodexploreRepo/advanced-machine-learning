@@ -17,6 +17,8 @@
 ## 1.2. Niches for Machine Learning
 - **Data Mining**: use historical data to improve decisions
   - e.g. Medical records &#8594; medical knowledge
+    - Given: 9147 patient records, each describing pregnancy and birth; Each patient contains 215 features
+    - Task: Classes of future patients at high risk for *Emergency Cesarean Section* (Sinh Mổ)
 - **Software Applications** that are hard to program by hand: Speech recognition, Image classification, Autonomous driving
 - **User Modeling**: Automatic Recommender Systems
 
