@@ -9,6 +9,7 @@
     - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
     - [1.3.2. Machine Learning Algorithm](#132-machine-learning-algorithm)
     - [1.3.3. Types of Machine Learning](#133-types-of-machine-learning)
+    - [1.3.4. Important Issues in Machine Learning](#134-important-issues-in-machine-learning)
   - [1.4. Deep Learning](#14-deep-learning)
 
 
@@ -97,6 +98,20 @@
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Take an action, environment responds, take new action
   - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
+
+### 1.3.4. Important Issues in Machine Learning
+- **Obtaining experience**
+  - How to obtain experience? Supervised learning vs. Unsupervised learning
+  - How many examples are enough? PAC learning theory
+- **Learning algorithms**
+  - What algorithm can approximate function well, when?
+  - How does the complexity of learning algorithms impact the learning accuracy?
+  - Whether the target function is learnable?
+- **Representing inputs**
+  - How to represent the inputs?
+  - How to remove the irrelevant information from the input representation?
+  - How to reduce the redundancy of the input representation?
+
 
 ## 1.4. Deep Learning
 ### 1.4.1. Shallow Learning vs Deep Learning
