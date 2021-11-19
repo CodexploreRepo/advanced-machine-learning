@@ -73,6 +73,10 @@
     - **Linear Regression**: assume linear dependence
     - **Non-linear Regression**: Time series forecasting
 - **Unsupervised learning**: Training data does not include desired outputs - Given (input, ~~correct output~~), (input, ?)
+  - Clustering: Find a set of prototypes representing the data
+  - Dimension Reduction / Principal Components: Find a subspace representing the data
+  - Independent components / dictionary learning: Find(small)setoffactorsforobservation
+  - Novelty/Anomaly detection: Find the odd one out
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Rewards from sequence of actions
 
