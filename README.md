@@ -6,6 +6,9 @@
   - [1.1. Why study Machine Learning](#11-why-study-machine-learning)
   - [1.2. Niches for Machine Learning](#12-niches-for-machine-learning)
   - [1.3. Machine Learning Concepts](#13-machine-learning-concepts)
+    - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
+    - [1.3.2. Machine Learning Algorithm](#132-machine-learning-algorithm)
+    - [1.3.3. Types of Machine Learning](#133-types-of-machine-learning)
   - [1.4. Deep Learning](#14-deep-learning)
 
 
