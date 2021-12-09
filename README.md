@@ -98,6 +98,7 @@
 - **Semi-supervised learning**: Training data includes a few desired outputs
 - **Reinforcement learning**: Take an action, environment responds, take new action
   - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
+<p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/145361790-008cd94d-96d2-400d-b3f9-021ed2f29e72.png"></p>
 
 ### 1.3.4. Important Issues in Machine Learning
 - **Obtaining experience**
