@@ -7,6 +7,7 @@
 - [3. Transformation Pipeline](./Pages/03_transformation_pipeline.md)
 - [4. EDA](./Pages/04_EDA.md)
 - [5. Feature Engineering](./Pages/05_feature-engineering.md)
+- [6. Evaluation Metrics](./Pages/06_evaluation_metrics.md)
 
 
 
