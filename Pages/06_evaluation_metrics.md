@@ -1,4 +1,4 @@
-# 6. Evaluation Metrics
+# Evaluation Metrics
 
 # Table of contents
 - [Table of contents](#table-of-contents)
