@@ -1,4 +1,4 @@
-# 4. EDA
+# EDA
 
 # Table of contents
 - [Table of contents](#table-of-contents)
