@@ -42,6 +42,8 @@ best_tree_size = min(scores.keys(), key=(lambda k: scores[k]))
 
 # 2. Cross-Validation
 - **For small dataset &#8594; Cross-validation**, we run our modeling process on different subsets of the data to get multiple measures of model quality.
+- **For large dataset &#8594; Hold-out**: when `training data > 100K or 1M`, we will hold-out 5-10% data as a validation set.
+
   ```Python
   from sklearn.model_selection import cross_val_score
   
@@ -109,7 +111,6 @@ Stratified k-fold cross-validation is same as just k-fold cross-validation, but 
   cross_val_score(sgd_clf, X_train, y_train_5, cv=3, scoring="accuracy")
   array([0.95035, 0.96035, 0.9604 ])
   ```
-- **For large dataset &#8594; Hold-out**: when `training data > 100K or 1M`, we will hold-out 5-10% data as a validation set.
 
 [(Back to top)](#table-of-contents)
 
