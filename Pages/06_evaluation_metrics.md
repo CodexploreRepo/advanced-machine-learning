@@ -4,6 +4,7 @@
 - [Table of contents](#table-of-contents)
 - [1. Underfitting and Overfitting](#1-underfitting-and-overfitting)
 - [2. Cross-Validation](#2-cross-validation)
+  - [2.1. Stratified k-fold](#21-stratified-k-fold) 
 - [3. Metrics for Regression](#3-metrics-for-regression)
 - [4. Metrics for Classification](#4-metrics-for-classification)
   - [4.1. Confusion Matrix](#41-confusion-matrix)
@@ -65,7 +66,7 @@ best_tree_size = min(scores.keys(), key=(lambda k: scores[k]))
   ```
   <img width="414" alt="Screenshot 2021-12-02 at 16 42 21" src="https://user-images.githubusercontent.com/64508435/144396996-81ae36c5-98c1-4a50-b9df-dee77eaf44cd.png"> 
   
-  - **Stratified k-fold**: Stratified k-fold cross-validation is same as just k-fold cross-validation, but in Stratified k-fold cross-validation, it does stratified sampling instead of random sampling.
+## 2.1. Stratified k-fold: Stratified k-fold cross-validation is same as just k-fold cross-validation, but in Stratified k-fold cross-validation, it does stratified sampling instead of random sampling.
   - For example, the US population is composed of 51.3% female and 48.7% male, so a well-conducted survey in the US would try to maintain this ratio in the sample: 513 female and 487 male. This is called `stratified sampling`: the population is divided into homogeneous subgroups called `strata`, and the right number of instances is sampled from each stratum to guarantee that the test set is representative of the overall population. If they used purely random sampling, there would be about 12% chance of sampling a skewed test set with either less than 49% female or more than 54% female. Either way, the survey results would be significantly biased.
     - Hence, Stratified k-fold keeps the same ratio of classes in each fold in comparison with the ratio of the original training data.
     - **Classification** problem: can apply Stratified k-fold directly
