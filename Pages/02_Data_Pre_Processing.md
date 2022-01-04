@@ -1,4 +1,4 @@
-# 2. Data Pre-Processing
+# Data Pre-Processing
 
 # Table of contents
 - [Table of contents](#table-of-contents)
