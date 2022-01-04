@@ -1,4 +1,4 @@
-# 1. Ensemble Method
+# Ensemble Method
 
 # Table of contents
 - [Table of contents](#table-of-contents)
