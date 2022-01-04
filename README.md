@@ -6,7 +6,7 @@
 - [2. Data Pre-Processing](./Pages/02_Data_Pre_Processing.md)
 - [3. Transformation Pipeline](./Pages/03_transformation_pipeline.md)
 - [4. EDA](./Pages/04_EDA.md)
-- [5. Feature Engineering]()
+- [5. Feature Engineering](./Pages/05_feature-engineering.md)
 
 
 
