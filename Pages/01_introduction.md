@@ -2,7 +2,6 @@
 
 # Table of contents
 - [Table of contents](#table-of-contents)
-
 - [1.1. Why study Machine Learning](#11-why-study-machine-learning)
 - [1.2. Niches for Machine Learning](#12-niches-for-machine-learning)
 - [1.3. Machine Learning Concepts](#13-machine-learning-concepts)
