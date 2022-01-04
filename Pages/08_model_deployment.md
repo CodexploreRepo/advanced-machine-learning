@@ -7,7 +7,7 @@
 
 
 
-# 1. Save Model and  Kaggle Submission
+# 1. Save Model and Kaggle Submission
 ## 1.1. Save Model
 - You can easily save Scikit-Learn models by using Python’s `pickle` module, or using `sklearn.externals.joblib`, which is more efficient at serializing large NumPy arrays:
 
