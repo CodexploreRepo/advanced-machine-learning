@@ -34,7 +34,7 @@
 </p>
 
 ## 2.2. MLE Calculation
-- Suppose we have three data points this time and we assume that they have been generated from a process that is adequately described by a Gaussian distribution. These points are 9, 9.5 and 11. 
+- [Reference](https://towardsdatascience.com/probability-concepts-explained-maximum-likelihood-estimation-c7b4342fdbb1) Suppose we have three data points this time and we assume that they have been generated from a process that is adequately described by a Gaussian distribution. These points are 9, 9.5 and 11. 
 - How do we calculate the maximum likelihood estimates of the parameter values of the Gaussian distribution μ and σ?
 - The probability density of observing a single data point x, that is generated from a Gaussian distribution is given by:
   - The semi colon used in the notation P(x; μ, σ) is there to emphasise that the symbols that appear after it are parameters of the probability distribution.
