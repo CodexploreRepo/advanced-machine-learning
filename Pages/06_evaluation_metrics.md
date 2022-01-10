@@ -8,6 +8,8 @@
 - [3. Metrics for Regression](#3-metrics-for-regression)
 - [4. Metrics for Classification](#4-metrics-for-classification)
   - [4.1. Confusion Matrix](#41-confusion-matrix)
+  - [4.2. Precision and Recall](#42-precision-and-recall)
+  - [4.3. F1 Score](#43-f1-score)
 
 # 1. Underfitting and Overfitting
 Models can suffer from either:
@@ -166,3 +168,35 @@ confusion_matrix(y_train_5, y_train_perfect_predictions)
 #array([[54579,     0],
 #      [    0,  5421]])
 ```
+
+## 4.2. Precision and Recall
+- **Precision**: accuracy of the positive predictions
+- **Recall**: the ratio of positive instances that are correctly detected by the classifier 
+<p align="center"><img width="250" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/148773812-229be486-9c96-4800-85d2-730621d2441c.png"></p>
+<p align="center"><img width="250" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/148773944-5d15d210-5a4c-4d3c-8947-c6aa681f4b95.png"></p>
+
+```Python
+>>> from sklearn.metrics import precision_score, recall_score
+>>> precision_score(y_train_5, y_train_pred) # == 4096 / (4096 + 1522)
+0.7290850836596654
+>>> recall_score(y_train_5, y_train_pred) # == 4096 / (4096 + 1325)
+0.7555801512636044
+```
+- In this case, when the classifer claims an image represents a 5, it is correct only 72.9% of the time. (Precision)
+- Moreover, it only detects 75.5% of the 5s. (Recall)
+
+## 4.3. F1 Score
+- It is often convenient to combine precision and recall into a single metric called the F1 score, in particular if you need a simple way to compare two classifiers. 
+- The F1 score is the harmonic mean of precision and recall. 
+- Whereas the regular mean treats all values equally, the harmonic mean gives much more weight to low values. 
+- As a result, the classifier will only get a high F1 score if both recall and precision are high.
+```Python
+>>> from sklearn.metrics import f1_score
+>>> f1_score(y_train_5, y_train_pred)
+0.7420962043663375
+```
+<p align="center"><img width="450" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/148774640-5e2378e3-c4f7-4796-bb66-b379a6daf930.png"></p>
+
+- The F1 score favors classifiers that have similar precision and recall. This is not always what you want: in some contexts you mostly care about precision, and in other contexts you really care about recall. 
+  - For example, if you trained a classifier to detect videos that are safe for kids, you would probably prefer a classifier that rejects many good videos (low recall) but keeps only safe ones (high precision), rather than a classifier that has a much higher recall but lets a few really bad videos show up in your product (in such cases, you may even want to add a human pipeline to check the classifier’s video selection). 
+  - On the other hand, suppose you train a classifier to detect shoplifters in surveillance images: it is probably fine if your classifier has only 30% precision as long as it has 99% recall (sure, the security guards will get a few false alerts, but almost all shoplifters will get caught).
