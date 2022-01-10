@@ -17,6 +17,7 @@
 - [1. Ensemble methods](./Pages/11_ensemble_method.md)
 - [2. Stochastic Gradient Descent](./Pages/12_stochastic-gradient-descent.md)
 - [3. Naïve Bayes](./Pages/13_naive_bayes.md)
+- [4. Linear Regression](./Pages/14_linear_regression)
 
 # Resources
 - Resource: [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
