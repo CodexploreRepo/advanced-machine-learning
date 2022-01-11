@@ -2,7 +2,7 @@
 
 # Table of contents
 - [Table of contents](#table-of-contents)
-- [1.1. Why study Machine Learning](#11-why-study-machine-learning)
+- [1.1. Machine Learning Introduction](#11-machine-learning-introduction)
 - [1.2. Niches for Machine Learning](#12-niches-for-machine-learning)
 - [1.3. Machine Learning Concepts](#13-machine-learning-concepts)
   - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
@@ -11,8 +11,11 @@
   - [1.3.4. Important Issues in Machine Learning](#134-important-issues-in-machine-learning)
 - [1.4. Deep Learning](#14-deep-learning)
 
+## 1.1. Machine Learning Introduction
+### 1.1.1. What is Machine Learning
+- Machine Learning is the field of study that gives computers the ability to learn without being explicitly programmed. (Arthur Samuel, 1959)
 
-## 1.1. Why study Machine Learning
+### 1.1.2. Why study Machine Learning
 - Automating automation
 - Getting computers to program themselves
 - Writing software is the bottleneck
@@ -76,6 +79,7 @@
       - E.g.: Linear programming
 ### 1.3.3. Types of Machine Learning
 - **Supervised (inductive) learning**: Training data includes desired outputs
+  - In supervised learning, the training set you feed to the algorithm includes the desired solutions, called labels 
   - *Classification*: discrete output
     - Binary Classification: input x, find y in {-1, +1}
     - Multi-class classification: input x, find y in {1, ..., k}
@@ -84,16 +88,36 @@
     - Given input x, find y in real-valued space R (R^d)
     - **Linear Regression**: assume linear dependence
     - **Non-linear Regression**: Time series forecasting
-- **Unsupervised learning**: Training data does not include desired outputs - Given (input, ~~correct output~~), (input, ?)
+    - Note: some regression algorithms can be used for classification as well, and vice versa. For example, Logistic Regression is commonly used for classification, as it can output a value that corresponds to the probability of belonging to a given class (e.g., 20% chance of being spam).
+  - Most important supervised learning algorithms:
+    - k-Nearest Neighbors
+    - Linear Regression
+    - Logistic Regression
+    - Support Vector Machines (SVMs)
+    - Decision Trees and Random Forests
+    - Neural networks
+- **Unsupervised learning**: Training data does not include desired outputs - (i.e:  the training data is unlabeled)
   - *Clustering*: Find a set of prototypes representing the data
+    - K-Means
+    - DBSCAN
+    - Hierarchical Cluster Analysis (HCA)
     - E.g.: Marketing segmentation, group of insurance interests, web news, pictures, city-planning 
   - *Dimension Reduction / Principal Components*: Find a subspace representing the data
-    - E.g.: Principal Component Analysis (PCA), Non-Linear Embedding
+    - Principal Component Analysis (PCA)
+    - Kernel PCA
+    - Locally Linear Embedding (LLE)
+    - t-Distributed Stochastic Neighbor Embedding (t-SNE)
+    - E.g.: Principal Component Analysis (PCA), Non-Linear Embedding, simplify the data without losing too much information. One way to do this is to merge several correlated features into one. For example, a car’s mileage may be strongly correlated with its age, so the dimensionality reduction algorithm will merge them into one feature that represents the car’s wear and tear.
+    - **Tips**:  good idea to try to reduce the dimension of your training data using a dimensionality reduction algorithm before you feed it to another Machine Learning algorithm (such as a supervised learning algorithm). It will run much faster, the data will take up less disk and memory space, and in some cases it may also perform better
   - *Independent components / dictionary learning*: Find (small) set of factors for observation
   - *Novelty/Anomaly detection*: Identification of new or unknown patterns
-    - Parametric approach
-    - Non-parametric approach
-- **Semi-supervised learning**: Training data includes a few desired outputs
+    - One-class SVM
+    - Isolation Forest
+    - E.g.: detecting unusual credit card transactions to prevent fraud, catching manufacturing defects, or automatically removing outliers from a dataset before feeding it to another learning algorithm. 
+- **Semi-supervised learning**: 
+  - Since labeling data is usually time-consuming and costly, you will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that’s partially labeled. This is called `semi-supervised learning`
+  - E.g.: Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). Now all the system needs is for you to tell it who these people are. Just add one label per person4 and it is able to name everyone in every photo, which is useful for searching photos.
+  - Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. 
 - **Reinforcement learning**: Take an action, environment responds, take new action
   - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
 <p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/145361790-008cd94d-96d2-400d-b3f9-021ed2f29e72.png"></p>
