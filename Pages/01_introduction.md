@@ -155,7 +155,9 @@
 ##### Challenges of Batch Learning
 - A big challenge with online learning is that if bad data is fed to the system, the system’s performance will gradually decline. 
 - If it’s a live system, your clients will notice. For example, bad data could come from a malfunctioning sensor on a robot, or from someone spamming a search engine to try to rank high in search results. 
-- **Solution**: To reduce this risk, you need to monitor your system closely and promptly switch learning off (and possibly revert to a previously working state) if you detect a drop in performance. You may also want to monitor the input data and react to abnormal data (e.g., using an anomaly detection algorithm).
+- **Solution**: To reduce this risk
+  - You need to monitor your system closely and promptly switch learning off (and possibly revert to a previously working state) if you detect a drop in performance. 
+  - You may also want to monitor the input data and react to abnormal data (e.g., using an anomaly detection algorithm).
 
 
 ### 1.3.5. Important Issues in Machine Learning
