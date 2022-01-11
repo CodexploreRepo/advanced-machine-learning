@@ -8,7 +8,7 @@
   - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
   - [1.3.2. Machine Learning Algorithm](#132-machine-learning-algorithm)
   - [1.3.3. Types of Machine Learning](#133-types-of-machine-learning)
-  - [1.3.4. Batch and Online Learning](#134-batch-and-online Learning)
+  - [1.3.4. Batch and Online Learning](#134-batch-and-online-learning)
   - [1.3.5. Important Issues in Machine Learning](#135-important-issues-in-machine-learning)
 - [1.4. Deep Learning](#14-deep-learning)
 
@@ -137,6 +137,25 @@
 
 ##### Drawback of Batch Learning
 - If you want a batch learning system to know about new data (such as a new type of spam), you need to train a new version of the system from scratch on the full dataset (not just the new data, but also the old data), then stop the old system and replace it with the new one.
+- training on the full set of data requires a lot of computing resources (CPU, memory space, disk space, disk I/O, network I/O, etc.). If you have a lot of data and you automate your system to train from scratch every day, it will end up costing you a lot of money. If the amount of data is huge, it may even be impossible to use a batch learning algorithm.
+- If your system needs to be able to learn autonomously and it has limited resources (e.g., a smartphone application or a rover on Mars), then carrying around large amounts of training data and taking up a lot of resources to train for hours every day is a showstopper.
+- Fortunately, a better option in all these cases is to use algorithms that are capable of learning incrementally.
+
+#### Online Learning
+- In online learning, you train the system incrementally by feeding it data instances sequentially, either individually or in small groups called `mini-batches`.
+<p align="center"><img width="400" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/148918437-39c5a5fd-f2cf-4c31-a30b-5ca4d861d841.png"><br>Figure: In online learning, a model is trained and launched into production, and then it keeps learning as new data comes in</p>
+
+- Online learning algorithms can also be used to train systems on huge datasets that cannot fit in one machine’s main memory (this is called `out-of-core` learning). The algorithm loads part of the data, runs a training step on that data, and repeats the process until it has run on all of the data 
+  - **Note**: `Out-of-core` learning is usually done offline (i.e., not on the live system), so online learning can be a confusing name. Think of it as incremental learning. 
+- One important parameter of online learning systems is how fast they should adapt to changing data: this is called the **learning rate**. 
+  - If you set a high learning rate, then your system will rapidly adapt to new data, but it will also tend to quickly forget the old data (you don’t want a spam filter to flag only the latest kinds of spam it was shown). 
+  - Conversely, if you set a low learning rate, the system will have more inertia; that is, it will learn more slowly, but it will also be less sensitive to noise in the new data or to sequences of nonrepresentative data points (outliers).
+<p align="center"><img width="400" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/148919618-6037bd89-132a-4733-9f2a-343f9e2c0f1d.png"><br>Figure: Using online learning to handle huge datasets</p>
+##### Challenges of Batch Learning
+- A big challenge with online learning is that if bad data is fed to the system, the system’s performance will gradually decline. 
+- If it’s a live system, your clients will notice. For example, bad data could come from a malfunctioning sensor on a robot, or from someone spamming a search engine to try to rank high in search results. 
+- **Solution**: To reduce this risk, you need to monitor your system closely and promptly switch learning off (and possibly revert to a previously working state) if you detect a drop in performance. You may also want to monitor the input data and react to abnormal data (e.g., using an anomaly detection algorithm).
+
 
 ### 1.3.5. Important Issues in Machine Learning
 - **Obtaining experience**
