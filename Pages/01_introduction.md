@@ -8,7 +8,7 @@
   - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
   - [1.3.2. Machine Learning Algorithm](#132-machine-learning-algorithm)
   - [1.3.3. Types of Machine Learning](#133-types-of-machine-learning)
-  - [1.3.4. Important Issues in Machine Learning](#134-important-issues-in-machine-learning)
+  - [1.3.5. Important Issues in Machine Learning](#135-important-issues-in-machine-learning)
 - [1.4. Deep Learning](#14-deep-learning)
 
 ## 1.1. Machine Learning Introduction
@@ -116,13 +116,17 @@
     - E.g.: detecting unusual credit card transactions to prevent fraud, catching manufacturing defects, or automatically removing outliers from a dataset before feeding it to another learning algorithm. 
 - **Semi-supervised learning**: 
   - Since labeling data is usually time-consuming and costly, you will often have plenty of unlabeled instances, and few labeled instances. Some algorithms can deal with data that’s partially labeled. This is called `semi-supervised learning`
-  - E.g.: Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). Now all the system needs is for you to tell it who these people are. Just add one label per person4 and it is able to name everyone in every photo, which is useful for searching photos.
+    - E.g.: Some photo-hosting services, such as Google Photos, are good examples of this. Once you upload all your family photos to the service, it automatically recognizes that the same person A shows up in photos 1, 5, and 11, while another person B shows up in photos 2, 5, and 7. This is the unsupervised part of the algorithm (clustering). Now all the system needs is for you to tell it who these people are. Just add one label per person4 and it is able to name everyone in every photo, which is useful for searching photos.
   - Most semisupervised learning algorithms are combinations of unsupervised and supervised algorithms. 
 - **Reinforcement learning**: Take an action, environment responds, take new action
-  - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
+  - Reinforcement Learning is a very different beast. The learning system, called an `agent` in this context, can observe the environment, select and perform actions, and get rewards in return (or penalties in the form of negative rewards, as shown in Figure 1-12). 
+  - It must then learn by itself what is the **best strategy**, called a `policy`, to get the most reward over time. 
+  - A `policy` defines what action the agent should choose when it is in a given situation.
+    - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
+    - Many robots implement Reinforcement Learning algorithms to learn how to walk. DeepMind’s AlphaGo program is also a good example of Reinforcement Learning: it made the headlines in May 2017 when it beat the world champion Ke Jie at the game of Go. It learned its winning policy by analyzing millions of games, and then playing many games against itself. Note that learning was turned off during the games against the champion; AlphaGo was just applying the policy it had learned.
 <p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/145361790-008cd94d-96d2-400d-b3f9-021ed2f29e72.png"></p>
 
-### 1.3.4. Important Issues in Machine Learning
+### 1.3.5. Important Issues in Machine Learning
 - **Obtaining experience**
   - How to obtain experience? Supervised learning vs. Unsupervised learning
   - How many examples are enough? PAC learning theory
