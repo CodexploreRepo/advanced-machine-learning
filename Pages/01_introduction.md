@@ -151,6 +151,7 @@
   - If you set a high learning rate, then your system will rapidly adapt to new data, but it will also tend to quickly forget the old data (you don’t want a spam filter to flag only the latest kinds of spam it was shown). 
   - Conversely, if you set a low learning rate, the system will have more inertia; that is, it will learn more slowly, but it will also be less sensitive to noise in the new data or to sequences of nonrepresentative data points (outliers).
 <p align="center"><img width="400" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/148919618-6037bd89-132a-4733-9f2a-343f9e2c0f1d.png"><br>Figure: Using online learning to handle huge datasets</p>
+
 ##### Challenges of Batch Learning
 - A big challenge with online learning is that if bad data is fed to the system, the system’s performance will gradually decline. 
 - If it’s a live system, your clients will notice. For example, bad data could come from a malfunctioning sensor on a robot, or from someone spamming a search engine to try to rank high in search results. 
