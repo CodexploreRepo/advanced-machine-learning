@@ -8,6 +8,7 @@
   - [1.3.1. Designing a Learning System](#131-designing-a-learning-system)
   - [1.3.2. Machine Learning Algorithm](#132-machine-learning-algorithm)
   - [1.3.3. Types of Machine Learning](#133-types-of-machine-learning)
+  - [1.3.4. Batch and Online Learning](#134-batch-and-online Learning)
   - [1.3.5. Important Issues in Machine Learning](#135-important-issues-in-machine-learning)
 - [1.4. Deep Learning](#14-deep-learning)
 
@@ -125,6 +126,17 @@
     - E.g.: Game playing, Self-driving cars, Autonomous plane flight 
     - Many robots implement Reinforcement Learning algorithms to learn how to walk. DeepMind’s AlphaGo program is also a good example of Reinforcement Learning: it made the headlines in May 2017 when it beat the world champion Ke Jie at the game of Go. It learned its winning policy by analyzing millions of games, and then playing many games against itself. Note that learning was turned off during the games against the champion; AlphaGo was just applying the policy it had learned.
 <p align="center"><img width="450" alt="Screenshot 2021-09-08 at 22 32 46" src="https://user-images.githubusercontent.com/64508435/145361790-008cd94d-96d2-400d-b3f9-021ed2f29e72.png"></p>
+
+### 1.3.4. Batch and Online Learning
+- Another criterion used to classify Machine Learning systems is whether or not the system can learn incrementally from a stream of incoming data.
+#### Batch Learning
+- In `batch learning`, the system is incapable of learning incrementally: it must be trained using all the available data.
+- This will generally take a lot of time and computing resources, so it is typically done offline. 
+- First the system is trained, and then it is launched into production and runs without learning anymore; it just applies what it has learned. 
+- This is called **offline learning**.
+
+##### Drawback of Batch Learning
+- If you want a batch learning system to know about new data (such as a new type of spam), you need to train a new version of the system from scratch on the full dataset (not just the new data, but also the old data), then stop the old system and replace it with the new one.
 
 ### 1.3.5. Important Issues in Machine Learning
 - **Obtaining experience**
