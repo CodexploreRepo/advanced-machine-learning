@@ -7,7 +7,9 @@
   - [2.1. MLE Examples](#21-mle-examples) 
   - [2.2. Maximum Likelihood Estimation Definition](#22-maximum-likelihood-estimation-definition)
 - [3. Bayes Theorem](#3-bayes-theorem)
-- [4. Maximum A Posterior](#4-maximum-a-posterior)
+- [4. Maximum A Posterior (MAP)](#4-maximum-a-posterior)
+  - [4.1. Maximum A Posterior (MAP) Definition](#41--maximum-a-posterior-definition)
+  - [4.2. MLE vs MAP](#42-mle-vs-map)
 
 # 1. Introduction 
 
@@ -64,6 +66,7 @@
 [(Back to top)](#table-of-contents)
 
 # 4. Maximum A Posterior 
+## 4.1. Maximum A Posterior Definition
 - Unlike MLE, when we already have prior idea about how the hypothesis will happen, we will use Maximum A Posterior (MAP).
 - Comparing the equation of `MAP` with `MLE`, we can see that the only difference is that MAP **includes prior in the formula**
   - which means that the **likelihood** `P(D|h)` is weighted by the **prior** `P(h)` in MAP, where `P(h)` is choosen according to our prior knowledge about the learning task
@@ -77,6 +80,10 @@
 <img width="400" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/149088364-e09e9f37-63e7-4ca9-ac62-07dcfbc38dfb.png">
 </p>
 
+## 4.2. MLE vs MAP
+<p align="center">
+<img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/149089867-5bc31065-691e-4b81-b255-47f1719fdb0b.jpeg">
+</p>
 
 
 
