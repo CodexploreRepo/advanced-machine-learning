@@ -85,6 +85,7 @@
 </p>
 
 ## 4.2. MLE vs MAP
+- Use MAP when there is prior information which we want to incorporate, or when we are especially concerned about avoiding over-fitting. 
 <p align="center">
 <img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/149089867-5bc31065-691e-4b81-b255-47f1719fdb0b.jpeg">
 </p>
