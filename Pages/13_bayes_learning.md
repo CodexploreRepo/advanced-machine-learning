@@ -1,4 +1,4 @@
-# 3. Naïve Bayes
+# 3. Bayes Learning
 
 # Table of contents
 - [Table of contents](#table-of-contents)
