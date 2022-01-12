@@ -55,6 +55,8 @@
 [(Back to top)](#table-of-contents)
 
 # 3. Bayes Theorem
+- Bayes `P(h|D)`: When we receive the new data D, we can update our belief/hypothesis
+
 <p align="center">
     <img width="800" src="https://user-images.githubusercontent.com/64508435/149085193-619e7e50-b550-403a-adcc-9a5ab6e9622a.png" />
 </p>
