@@ -73,6 +73,8 @@
 - Comparing the equation of `MAP` with `MLE`, we can see that the only difference is that MAP **includes prior in the formula**
   - which means that the **likelihood** `P(D|h)` is weighted by the **prior** `P(h)` in MAP, where `P(h)` is choosen according to our prior knowledge about the learning task
 -  *Step 1*: For each hypothesis h in H, calculate  `posterior` probability
+  -  the purpose is to find **argmax(h)** of `P(h|D) = P(D|h) x P(h) / P(D)` and `P(D)` is not dependent of h. 
+  -  Hence argmax(h) of P(h|D) is the same as argmax of P(D|h) x P(h).
 <p align="center">
     <img width="400" alt="Screenshot 2022-01-12 at 16 07 37" src="https://user-images.githubusercontent.com/64508435/149088143-e9f789a3-d863-4204-b3e6-0fb6735d3a97.png">
 </p>
@@ -86,6 +88,10 @@
 <p align="center">
 <img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/149089867-5bc31065-691e-4b81-b255-47f1719fdb0b.jpeg">
 </p>
+
+- **Note**: For uniform prior, p(h) is the same for all possible h. 
+  - Hence the maximum value of p(h|D) = p(D|h) x p(h) only depends on p(D|h) as p(h) is the same for all h(s). 
+  - Therefore, MLE can concide with MAP
 
 
 
