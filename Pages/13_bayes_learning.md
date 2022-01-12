@@ -20,7 +20,8 @@
 </p>
 
 ### 2.1.1. Log likelihood
-- If is often easier to work with the **natural log of the likelihood function**. For short this is simply called the `log likelihood`. Since ln(x) is an increasing function, the maxima of the likelihood and log likelihood coincide.
+- If is often easier to work with the **natural log of the likelihood function**. For short this is simply called the `log likelihood`. 
+  - Since ln(x) is an increasing function, the maxima of the likelihood and log likelihood coincide.
 
 <p align="center">
   <img width="650" src="https://user-images.githubusercontent.com/64508435/149059337-aed113bb-bf17-4772-9e5a-ecca737ac13e.png" />
