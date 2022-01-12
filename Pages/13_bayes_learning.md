@@ -4,67 +4,47 @@
 - [Table of contents](#table-of-contents)
 - [1. Introduction](#1-introduction.md)
 - [2. Maximum-Likelihood Estimation (MLE)](#2-maximum-likelihood-estimation)
+  - [2.1. MLE Examples](#21-mle-examples) 
+  - [2.2. Maximum Likelihood Estimation Definition](#22-maximum-likelihood-estimation-definition)
 
 
 # 1. Introduction 
 
 # 2. Maximum-Likelihood Estimation
-## 2.1. MLE Introducion
-- **Likelihood**: probability of observing sample under distribution d , which, given the independence assumption is
+- There are many methods for estimating unknown parameters from data. We will first consider the `maximum likelihood estimate (MLE)`, which answers the question:
+  - For which parameter value does the observed data have the biggest probability?
+## 2.1. MLE Examples
+- We will explain the MLE through a series of examples.
 <p align="center">
-  <img width="400" src="https://user-images.githubusercontent.com/64508435/148676323-c241763f-236d-4150-8b8f-31160b2ef983.png" />
+  <img width="650" src="https://user-images.githubusercontent.com/64508435/149057110-a375832d-230d-48fd-84b6-eb84e521e204.png" />
 </p>
 
-- **Maximum Likelihood Estimation (MLE)** is a method that determines values for the parameters of a model. 
-  - Select a distribution maximizing the sample probability
-  - The parameter values are found such that they maximise the likelihood that the process described by the model produced the data that were actually observed.
-  <p align="center">
-    <img width="400" src="https://user-images.githubusercontent.com/64508435/148676422-f0feafc1-3d30-4973-b6e5-7706de817986.png" />
-  </p>
-
-- For example, Let’s suppose we have observed 10 data points from some process. For example, each data point could represent the length of time in seconds that it takes a student to answer a specific exam question. These 10 data points are shown in the figure below
-  - For these data we’ll assume that the data generation process can be adequately described by a Gaussian (normal) distribution
-  - **Gaussian distribution has 2 parameters**. The mean, `μ`, and the standard deviation, `σ`.
-  - Different values of these parameters result in different curves. 
-  - We want to know which curve was most likely responsible for creating the data points that we observed? (See figure below). 
-  - *Maximum likelihood estimation is a method that will find the values of μ and σ that result in the curve that best fits the data*.
+### 2.1.1. Log likelihood
+- If is often easier to work with the **natural log of the likelihood function**. For short this is simply called the `log likelihood`. Since ln(x) is an increasing function, the maxima of the likelihood and log likelihood coincide.
 
 <p align="center">
-  <img width="500" src="https://user-images.githubusercontent.com/64508435/148675089-44e7be47-4898-4979-9460-bea8ecd51de0.png" />
+  <img width="650" src="https://user-images.githubusercontent.com/64508435/149059337-aed113bb-bf17-4772-9e5a-ecca737ac13e.png" />
 </p>
 
-## 2.2. MLE Calculation
-- [Reference](https://towardsdatascience.com/probability-concepts-explained-maximum-likelihood-estimation-c7b4342fdbb1) Suppose we have three data points this time and we assume that they have been generated from a process that is adequately described by a Gaussian distribution. These points are 9, 9.5 and 11. 
-- How do we calculate the maximum likelihood estimates of the parameter values of the Gaussian distribution μ and σ?
-- The probability density of observing a single data point x, that is generated from a Gaussian distribution is given by:
-  - The semi colon used in the notation P(x; μ, σ) is there to emphasise that the symbols that appear after it are parameters of the probability distribution.
+- The following example illustrates how we can use the method of maximum likelihood to estimate multiple parameters at once.
 <p align="center">
-  <img width="400" src="https://user-images.githubusercontent.com/64508435/148675856-7e9e6174-2290-4e4c-9faa-4546f509c7dc.png" />
+  <img width="700" src="https://user-images.githubusercontent.com/64508435/149060302-cb376d90-37d6-43ff-bc03-0164d233b19c.png" />
+  <img width="700" src="https://user-images.githubusercontent.com/64508435/149060584-9f8dfb72-d6d8-4637-ae07-649cf41aaea7.png" />
 </p>
-  
-  - In our example the total (joint) probability density of observing the three data points is given by
 
+### 2.2. Maximum Likelihood Estimation Definition
+- **Likelihood** `P(data | p)`; where p are parameters of a distribution/hypothesis `h`
+- Given data, the maximum likelihood estimate (MLE) for the parameter p is the value of p that maximizes **likelihood** `P(data|p)`. 
+  - i.e: MLE is the value of p for which the data is most likely.
+- **In general**, given training data D, MLE is to find the best hypothesis h that maximizes the likelihood of the training data
 <p align="center">
-  <img width="600" src="https://user-images.githubusercontent.com/64508435/148676091-ed45a5fa-d528-48b1-bf88-e119abe2a8af.png" />
+    <img width="400" src="https://user-images.githubusercontent.com/64508435/149061051-1d8d85e3-18ab-494c-9ecd-54c0f1a355c7.png" />
 </p>
-  
-  - A technique that can help us find maxima (and minima) of functions. It’s called differentiation.
 
-### 2.2.1. Log Likelihood
-- The above expression for the total probability is actually quite a pain to differentiate, so it is almost always simplified by taking the natural logarithm of the expression.
-- That is fine because natural logarithm is a monotonically increasing function. 
-  - This means that if the value on the x-axis increases, the value on the y-axis also increases 
+- If  H = all possible 1-dimensional Gaussian distributions (like Example 4 above), 
 <p align="center">
-  <img width="600" src="https://user-images.githubusercontent.com/64508435/148676559-089c868a-68e7-4446-b391-79d785eb8198.png" />
+    <img width="400" src="https://user-images.githubusercontent.com/64508435/149061429-c0dc9599-079a-4acc-a5e0-5965c9235b96.png" />
 </p>
-
-- This expression can be differentiated to find the maximum. In this example we’ll find the MLE of the mean, μ. To do this we take the partial derivative of the function with respect to μ, giving
-<p align="center">
-  <img width="400" src="https://user-images.githubusercontent.com/64508435/148676684-028d2ec9-5eb2-4d30-8227-32e9fb374a0b.png" />
-</p>
-
-- Set the LHS = 0, so μ = 9.833
-
 
 
 [(Back to top)](#table-of-contents)
