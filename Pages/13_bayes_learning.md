@@ -41,7 +41,7 @@
     <img width="400" src="https://user-images.githubusercontent.com/64508435/149061051-1d8d85e3-18ab-494c-9ecd-54c0f1a355c7.png" />
 </p>
 
-- If  H = all possible 1-dimensional Gaussian distributions (like Example 4 above), 
+- If  H = all possible 1-dimensional Normal (Gaussian) distributions (like example 4 above), 
 <p align="center">
     <img width="400" src="https://user-images.githubusercontent.com/64508435/149061429-c0dc9599-079a-4acc-a5e0-5965c9235b96.png" />
 </p>
