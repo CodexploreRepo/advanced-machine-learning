@@ -8,7 +8,7 @@
   - [2.2. Maximum Likelihood Estimation Definition](#22-maximum-likelihood-estimation-definition)
 - [3. Bayes Theorem](#3-bayes-theorem)
 - [4. Maximum A Posterior (MAP)](#4-maximum-a-posterior)
-  - [4.1. Maximum A Posterior (MAP) Definition](#41--maximum-a-posterior-definition)
+  - [4.1. Maximum A Posterior (MAP) Definition](#41-maximum-a-posterior-definition)
   - [4.2. MLE vs MAP](#42-mle-vs-map)
 
 # 1. Introduction 
