@@ -55,7 +55,7 @@
 [(Back to top)](#table-of-contents)
 
 # 3. Bayes Theorem
-- Bayes: When we receive the new data D, we can update our belief/hypothesis `P(h|D)` provided that everything one the RHS is known.
+- Bayes: When we receive the new data D, we can update our belief/hypothesis `P(h|D)` provided that everything on the RHS is known.
 
 <p align="center">
     <img width="800" src="https://user-images.githubusercontent.com/64508435/149085193-619e7e50-b550-403a-adcc-9a5ab6e9622a.png" />
