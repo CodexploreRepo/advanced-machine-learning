@@ -20,6 +20,7 @@
 - [4. Linear Regression](./Pages/14_linear_regression)
 
 # Resources
-- Resource: [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
+- [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
+- [Essence of linear algebra](https://www.youtube.com/watch?v=k7RM-ot2NWY&list=RDCMUCYO_jab_esuFRV4b17AJtAw)
 
 [(Back to top)](#table-of-contents)
