@@ -21,6 +21,6 @@
 
 # Resources
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
-- [Essence of linear algebra](https://www.youtube.com/watch?v=k7RM-ot2NWY&list=RDCMUCYO_jab_esuFRV4b17AJtAw)
+- [Essence of Linear Algebra](https://www.youtube.com/watch?v=k7RM-ot2NWY&list=RDCMUCYO_jab_esuFRV4b17AJtAw)
 
 [(Back to top)](#table-of-contents)
