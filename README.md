@@ -15,9 +15,9 @@
 
 ## Part B. Machine Learning Models
 - [1. Ensemble methods](./Pages/11_ensemble_method.md)
-- [2. Stochastic Gradient Descent](./Pages/12_stochastic-gradient-descent.md)
+- [2. Linear Regression](./Pages/12_linear-regression.md)
 - [3. Bayes Learning](./Pages/13_bayes_learning.md)
-- [4. Linear Regression](./Pages/14_linear_regression)
+
 
 # Resources
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
