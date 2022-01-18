@@ -14,10 +14,9 @@
 - [8. Model Deployment](./Pages/08_model_deployment.md)
 
 ## Part B. Machine Learning Models
-- [1. Ensemble methods](./Pages/11_ensemble_method.md)
-- [2. Linear Regression](./Pages/12_linear-regression.md)
+- [1. Linear Regression](./Pages/11_linear-regression.md)
 - [3. Bayes Learning](./Pages/13_bayes_learning.md)
-
+- [1. Ensemble methods](./Pages/11_ensemble_method.md)
 
 # Resources
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
