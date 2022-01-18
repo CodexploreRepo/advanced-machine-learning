@@ -37,7 +37,7 @@
 -  `Var[y-y_pred]` and `Var[y]` are variance of prediction errors and actual values respectively. 
 
 <p align="center">
-<img width="658" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149874565-cca7c0ed-1313-4799-b241-5eabd49dc0bd.png"></p>
+<img width="400" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149874565-cca7c0ed-1313-4799-b241-5eabd49dc0bd.png"></p>
 
 
 [(Back to top)](#table-of-contents)
