@@ -5,6 +5,7 @@
 - [1. Statistics in Linear Model](#1-statistics-in-linear-model)
   - [1.1. Sum of Squares](#11-sum-of-squares)
   - [1.2. R-squared](#12-r-squared)
+  - [1.3. Explained Variance](#13-explained-variance)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
@@ -31,6 +32,12 @@
 
 <p align="center">
 <img width="658" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149872313-f5ed987e-5a64-48a6-975b-0fd5cc9082ed.png"></p>
+
+## 1.3. Explained Variance
+-  `Var[y-y_pred]` and `Var[y]` are variance of prediction errors and actual values respectively. 
+
+<p align="center">
+<img width="658" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149874565-cca7c0ed-1313-4799-b241-5eabd49dc0bd.png"></p>
 
 
 [(Back to top)](#table-of-contents)
