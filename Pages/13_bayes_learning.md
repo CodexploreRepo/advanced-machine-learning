@@ -100,4 +100,13 @@
 
 # 5. Probabilistic Generative Models
 
+<p align="center">
+<img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150098908-fe03ee3f-1ca1-47e4-b2d9-873eb9c1395b.jpeg">
+<img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150098837-b7bb9062-3e91-41bd-8093-beafba150de8.jpeg">
+<img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150099338-296b0a9a-c25d-4053-ab72-78a3ae30fa1c.jpeg">
+</p>
+
+
+
+
 [(Back to top)](#table-of-contents)
