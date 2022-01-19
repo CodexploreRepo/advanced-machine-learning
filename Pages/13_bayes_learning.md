@@ -10,6 +10,8 @@
 - [4. Maximum A Posterior (MAP)](#4-maximum-a-posterior)
   - [4.1. Maximum A Posterior (MAP) Definition](#41-maximum-a-posterior-definition)
   - [4.2. MLE vs MAP](#42-mle-vs-map)
+- [5. Probabilistic Generative Models](#5-probabilistic-generative-models)
+
 
 # 1. Introduction 
 
@@ -94,7 +96,8 @@
   - Hence the maximum value of p(h|D) = p(D|h) x p(h) only depends on p(D|h) as p(h) is the same for all h(s). 
   - Therefore, MLE can concide with MAP
 
+[(Back to top)](#table-of-contents)
 
-
+# 5. Probabilistic Generative Models
 
 [(Back to top)](#table-of-contents)
