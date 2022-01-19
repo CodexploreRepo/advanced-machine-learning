@@ -112,6 +112,8 @@
 
 # 6. Naive Bayes Classifier
 - A Naive Bayes classifier is a probabilistic generative model with the “naive” assumption of **conditional independence between every pair of features** given the value of the class variable. 
+- **Practical insight**: Nearly all probabilistic models are “inaccurate”, but many are, nonetheless, *useful when trained with sufficient data*.
+
 <p align="center">
 <img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150103107-680a295b-1163-47a8-8259-59c7a4ba0575.jpeg">
 </p>
