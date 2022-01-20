@@ -6,12 +6,16 @@
   - [1.1. Sum of Squares](#11-sum-of-squares)
   - [1.2. R-squared](#12-r-squared)
   - [1.3. Explained Variance](#13-explained-variance)
+  - [1.4. Mean Absolute Error](#14-mean-absolute-error)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
 - **Sum of squares** (SS) is a statistical tool that is used to identify the dispersion of data as well as how well the data can fit the model in regression analysis. 
 - The general rule is that a smaller sum of squares indicates a better model, as there is less variation in the data.
-- **3 main types of sum of squares**: total sum of squares, regression sum of squares, and residual sum of squares.
+- **3 main types of sum of squares**: 
+  - `SST` total sum of squares: Variance that already exists in the data
+  - `SSR` regression sum of squares: Try to explain the variance by using the regression model. (i.e: How far away, your predicted values from the mean)
+  - `SSE` residual sum of squares: The un-explain part of the model. How far away the predicted value from the actual one.
 
 <p align="center">
   <img width="650" src="https://user-images.githubusercontent.com/64508435/149864125-e42aa3ec-7f6b-4664-9803-3ec271b17ac0.png" />
@@ -24,6 +28,7 @@
 
 ## 1.2. R-squared
 - R-squared is a statistical measure that represents the goodness of fit of a regression model. The ideal value for r-square is 1. The closer the value of r-square to 1, the better is the model fitted.
+- `R-square = SSR/SST = 1 - SSE/SST`: how you use the model to explain the data
 
 <p align="center">
   <img width="400" src="https://user-images.githubusercontent.com/64508435/149864618-6676f14d-806d-4ed1-a038-16626dc4db30.png" />
@@ -39,5 +44,6 @@
 <p align="center">
 <img width="400" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149874565-cca7c0ed-1313-4799-b241-5eabd49dc0bd.png"></p>
 
-
+## 1.4. Mean Absolute Error
+- Easy to understand the model error via MAE as they are on the same scale.
 [(Back to top)](#table-of-contents)
