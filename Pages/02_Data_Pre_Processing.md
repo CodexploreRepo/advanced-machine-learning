@@ -6,6 +6,7 @@
   - [2.1. Read and Split Data](#21-read-and-split-data) 
   - [2.2. Missing Values](#22-missing-values)
   - [2.3. Categorical variable](#23-categorical-variable)
+  - [2.4. Feature Scaling](#24-feature-scaling)
 
 # 2. Data Pre-Processing
 ## 2.1. Read and Split Data
@@ -249,6 +250,7 @@ OH_X_train = pd.concat([num_X_train, OH_cols_train], axis=1)
 OH_X_valid = pd.concat([num_X_valid, OH_cols_valid], axis=1)
 ```
 
+## 2.4. Feature Scaling
 
 
 [(Back to top)](#table-of-contents)
