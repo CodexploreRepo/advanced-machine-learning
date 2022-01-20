@@ -7,6 +7,8 @@
   - [1.2. R-squared](#12-r-squared)
   - [1.3. Explained Variance](#13-explained-variance)
   - [1.4. Mean Absolute Error](#14-mean-absolute-error)
+- [2. Linear Regression](#2-linear-regression)
+- [3. Polynomial Regression](#3-polynomial-regression)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
@@ -46,4 +48,54 @@
 
 ## 1.4. Mean Absolute Error
 - Easy to understand the model error via MAE as they are on the same scale.
+
+[(Back to top)](#table-of-contents)
+
+# 2. Linear Regression
+- Both the `Normal Equation` and Scikit-Learn’s LinearRegression class (which is based on `Singular Value Decomposition (SVD) approach`) get **very slow when the number of features (`n`) grows large** (e.g. 100,000). 
+- On the positive side, both are linear with regard to the number of instances in the training set (they are O(m)), 
+    - so they **handle large training sets efficiently (`m`)**, provided they can fit in memory.
+```Python
+from sklearn.linear_model import LinearRegression
+lin_reg = LinearRegression()
+lin_reg.fit(X_train,y_train)
+lin_reg.intercept_, lin_reg.coef_
+```
+- To evaluate the performance of Linear Regression
+```Python
+from sklearn import metrics
+y_pred = lin_reg.predict(x_test)
+print(metrics.explained_variance_score(y_test, y_pred))
+print(metrics.mean_absolute_error(y_test, y_pred))
+print(metrics.mean_squared_error(y_test, y_pred))
+```
+# 3. Polynomial Regression
+- What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
+- A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features. 
+- This technique is called `Polynomial Regression`.
+
+```Python
+poly2 = preprocessing.PolynomialFeatures(degree = 2, include_bias = False)
+x2 = poly2.fit_transform(x)
+
+x2_train, x2_test, y2_train, y2_test = model_selection.train_test_split(x2, y, test_size = 0.2, random_state = 2022)
+
+regr2 = linear_model.LinearRegression()
+regr2.fit(x2_train, y2_train)
+
+print('R^2 score: %.6f' % regr2.score(x2_test, y2_test))
+print(regr2.coef_)
+print(poly2.powers_)
+
+#R^2 score: 0.994592
+#[  0.          69.26585136  93.05262999 -23.7832548  -15.10744814
+# -12.51933868]
+#[[0 0] => A^0 * B^0 = 1
+#[1 0]  => A^1 * B^0 = A
+#[0 1]  => A^0 * B^1 = B
+#[2 0]
+#[1 1]
+#[0 2]]
+```
+
 [(Back to top)](#table-of-contents)
