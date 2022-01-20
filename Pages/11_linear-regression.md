@@ -119,6 +119,12 @@ print(poly2.powers_)
 <p align="center">
 <img width="598" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/150304872-a520602e-73a5-4f80-b865-a561607566de.png"></p>
 
+### When to use plain Linear Regression (i.e., without any regularization), Ridge, Lasso, or Elastic Net?
+
+- A model with some regularization typically performs better than a model without any regularization, so you should generally prefer Ridge Regression over plain Linear Regression.
+- Lasso Regression uses an `ℓ1` penalty, which tends to push the weights down to exactly zero. This leads to sparse models, where all weights are zero except for the most important weights. This is a way to perform feature selection automatically, which is good if you suspect that only a few features actually matter. When you are not sure, you should prefer Ridge Regression.
+- Elastic Net is generally preferred over Lasso since Lasso may behave erratically in some cases (when several features are strongly correlated or when there are more features than training instances). However, it does add an extra hyperparameter to tune. If you want Lasso without the erratic behavior, you can just use Elastic Net with an `l1_ratio` close to 1.
+
 ## 5.1. Ridge Regression
 - *Ridge Regression* (also called Tikhonov regularization) is a regularized version of Linear Regression: a `regularization term` is added to the cost function.
 - The hyperparameter `α` controls how much you want to regularize the model. 
