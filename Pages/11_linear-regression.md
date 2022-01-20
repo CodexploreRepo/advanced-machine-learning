@@ -9,6 +9,8 @@
   - [1.4. Mean Absolute Error](#14-mean-absolute-error)
 - [2. Linear Regression](#2-linear-regression)
 - [3. Polynomial Regression](#3-polynomial-regression)
+- [4. Bias-Variance Tradeoff](#4-bias-variance-tradeoff)
+- [5. Regularized Linear Model](#5-regularized-linear-model)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
@@ -72,8 +74,10 @@ print(metrics.mean_squared_error(y_test, y_pred))
 # 3. Polynomial Regression
 - What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
 - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features. 
-- This technique is called `Polynomial Regression`.
+- This technique is called **Polynomial Regression**.
 
+- Usually, we will set degree up to 4 as to reduce `overfitting`. This is also known as to `regularize` the model (i.e., **to constrain it**)
+  - The fewer degrees of freedom it has, the harder it will be for it to overfit the data. A simple way to regularize a polynomial model is to reduce the number of polynomial degrees.
 ```Python
 poly2 = preprocessing.PolynomialFeatures(degree = 2, include_bias = False)
 x2 = poly2.fit_transform(x)
@@ -99,3 +103,15 @@ print(poly2.powers_)
 ```
 
 [(Back to top)](#table-of-contents)
+
+# 4. Bias-Variance Tradeoff
+
+# 5. Regularized Linear Model
+- In order to address overfitting, we can use **Regularization**
+  - Incorporate model complexity for optimization, penalize complex models using prior knowledge
+  - Keep all the features, but reduce magnitude/values of model parameters
+  - Works well when we have a lot of features, each of which contributes a bit to the prediction
+- For a linear model, regularization is typically achieved by constraining the weights of the model.
+
+<p align="center">
+<img width="598" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/150304872-a520602e-73a5-4f80-b865-a561607566de.png"></p>
