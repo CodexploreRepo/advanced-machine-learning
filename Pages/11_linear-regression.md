@@ -13,6 +13,7 @@
 - [5. Regularized Linear Model](#5-regularized-linear-model)
   - [5.1. Ridge Regression](#51-ridge-regression) 
   - [5.2. Lasso Regression](#52-lasso-regression)
+  - [5.3. Elastic Net](#53-elastic-net)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
