@@ -11,6 +11,8 @@
 - [3. Polynomial Regression](#3-polynomial-regression)
 - [4. Bias-Variance Tradeoff](#4-bias-variance-tradeoff)
 - [5. Regularized Linear Model](#5-regularized-linear-model)
+  - [5.1. Ridge Regression](#51-ridge-regression) 
+  - [5.2. Lasso Regression](#52-lasso-regression)
 
 # 1. Statistics in Linear Model
 ## 1.1. Sum of Squares
@@ -115,3 +117,37 @@ print(poly2.powers_)
 
 <p align="center">
 <img width="598" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/150304872-a520602e-73a5-4f80-b865-a561607566de.png"></p>
+
+## 5.1. Ridge Regression
+- *Ridge Regression* (also called Tikhonov regularization) is a regularized version of Linear Regression: a `regularization term` is added to the cost function.
+- The hyperparameter `α` controls how much you want to regularize the model. 
+    - If `α = 0`, then Ridge Regression is just Linear Regression. If α is very large, then all weights end up very close to zero and the result is a flat line going through the data’s mean. 
+
+```Python
+for alpha in [1, 0.1, 0.01, 0.001]:
+    ridge = linear_model.Ridge(alpha = alpha)
+    ridge.fit(x_train, y_train)
+    print('score:', ridge.score(x_test, y_test))
+    print(ridge.coef_)
+```
+
+## 5.2. Lasso Regression
+- **Least Absolute Shrinkage and Selection Operator** (Lasso) Regression (usually simply called Lasso Regression) is another regularized version of Linear Regression
+- An important characteristic of Lasso Regression is that it tends to eliminate the weights of the least important features (i.e., set them to zero). 
+- Lasso Regression **automatically performs feature selection and outputs a sparse model** (i.e., with few non-zero feature weights).
+```Python
+from sklearn.linear_model import Lasso
+lasso_reg = Lasso(alpha=0.1)
+lasso_reg.fit(X, y)
+lasso_reg.predict([[1.5]])
+```
+## 5.3. Elastic Net
+The regularization term is a simple mix of both Ridge and Lasso’s regularization terms, and you can control the mix ratio r. 
+- When `r = 0`, Elastic Net is equivalent to Ridge Regression
+- When `r = 1`, it is equivalent to Lasso Regression
+```Python
+from sklearn.linear_model import ElasticNet
+elastic_net = ElasticNet(alpha=0.1, l1_ratio=0.5) #l1_ratio corresponds to the mix ratio r
+elastic_net.fit(X, y)
+elastic_net.predict([[1.5]])
+```
