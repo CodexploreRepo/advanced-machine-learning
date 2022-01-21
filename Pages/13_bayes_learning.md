@@ -130,6 +130,7 @@
 <img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150463871-4cc1c377-c9c8-4358-9f36-0e64cde50d7a.png">
 </p>
 
+- [Mixing categorial and continuous data in Naive Bayes classifier using scikit-learn](https://stackoverflow.com/questions/14254203/mixing-categorial-and-continuous-data-in-naive-bayes-classifier-using-scikit-lea)
 
 # 6.1. Limitation of Naive Bayes
 - Although NB makes computation possible & Yields optimal classifiers when satisfied with fairly good empirical results
