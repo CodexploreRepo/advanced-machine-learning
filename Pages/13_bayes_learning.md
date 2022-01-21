@@ -125,6 +125,12 @@
 <img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150103975-671eb804-287a-4885-8a53-692a0b74d805.jpeg">
 </p>
 
+### Types of Naive Bayes Classifier
+<p align="center">
+<img width="600" alt="Screenshot 2022-01-12 at 16 09 10" src="https://user-images.githubusercontent.com/64508435/150463871-4cc1c377-c9c8-4358-9f36-0e64cde50d7a.png">
+</p>
+
+
 # 6.1. Limitation of Naive Bayes
 - Although NB makes computation possible & Yields optimal classifiers when satisfied with fairly good empirical results
 - Naive Bayes is seldom satisfied in practice, as attributes (variables) are often correlated
