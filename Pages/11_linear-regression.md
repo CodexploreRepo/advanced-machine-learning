@@ -51,6 +51,7 @@
 <p align="center">
 <img width="400" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/149874565-cca7c0ed-1313-4799-b241-5eabd49dc0bd.png"></p>
 
+
 ## 1.4. Mean Absolute Error
 - Easy to understand the model error via MAE as they are on the same scale.
 
@@ -78,7 +79,6 @@ print(metrics.mean_squared_error(y_test, y_pred))
 - What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
 - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features. 
 - This technique is called **Polynomial Regression**.
-
 - Usually, we will set degree up to 4 as to reduce `overfitting`. This is also known as to `regularize` the model (i.e., **to constrain it**)
   - The fewer degrees of freedom it has, the harder it will be for it to overfit the data. A simple way to regularize a polynomial model is to reduce the number of polynomial degrees.
 ```Python
@@ -108,6 +108,14 @@ print(poly2.powers_)
 [(Back to top)](#table-of-contents)
 
 # 4. Bias-Variance Tradeoff
+- An important theoretical result of statistics and Machine Learning is the fact that a model’s generalization error can be expressed as the sum of three very different errors:
+### Bias
+- This part of the generalization error is due to wrong assumptions, such as assuming that the data is linear when it is actually quadratic. A high-bias model is most likely to underfit the training data. 
+### Variance
+- This part is due to the model’s excessive sensitivity to small variations in the training data. A model with many degrees of freedom (such as a high-degree polynomial model) is likely to have high variance and thus overfit the training data.
+### Irreducible error
+- This part is due to the noisiness of the data itself. The only way to reduce this part of the error is to clean up the data (e.g., fix the data sources, such as broken sensors, or detect and remove outliers).
+- Increasing a model’s complexity will typically increase its variance and reduce its bias. Conversely, reducing a model’s complexity increases its bias and reduces its variance. This is why it is called a trade-off.
 
 # 5. Regularized Linear Model
 - In order to address overfitting, we can use **Regularization**
