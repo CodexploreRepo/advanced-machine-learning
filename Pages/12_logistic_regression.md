@@ -6,7 +6,7 @@
   - [1.1. Odds](#11-odds) 
   - [1.2. Logistic Regression](#12-logistic-regression)
   - [1.3. Maximum Likelihood for Logistic Regression](#13-maximum-likelihood-for-logistic-regression)
-
+- [2. Logistic Regression Implementation](#12-logistic-regression-implementation)
 
 # 1. Introduction
 - Can we use regression model for classification ? YES
@@ -39,5 +39,20 @@
 <img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123912-46f09e5f-72e9-44b1-a9da-0b89ece6a129.jpeg">
 </p>
 
+# 2. Logistic Regression Implementation
+- The hyperparameter controlling the regularization strength of a Scikit-Learn `LogisticRegression` model is **not alpha** (as in other linear models), but its inverse: C. The higher the value of `C`, the less the model is regularized.
+
+```Python
+# build an estimator with smaller C
+log_reg = linear_model.LogisticRegression(solver = 'lbfgs', C = 0.001) #C = [0.0001, 0.01, 0.1, 1]
+log_reg.fit(x_train, y_train)
+
+# Look at model’s estimated probabilities
+X_new = np.linspace(0, 3, 1000).reshape(-1, 1)
+y_proba = log_reg.predict_proba(X_new)
+plt.plot(X_new, y_proba[:, 1], "g-", label="Iris virginica")
+plt.plot(X_new, y_proba[:, 0], "b--", label="Not Iris virginica")
+# + more Matplotlib code to make the image look pretty
+```
 
 [(Back to top)](#table-of-contents)
