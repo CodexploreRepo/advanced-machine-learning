@@ -5,7 +5,7 @@
 - [1. Introduction](#1-introduction)
   - [1.1. Odds](#11-odds) 
   - [1.2. Logistic Regression](#12-logistic-regression)
-  - [1.3. Objective Function for Logistic Regression](#13-objective-function-for-logistic-regression)
+  - [1.3. Maximum Likelihood for Logistic Regression](#13-maximum-likelihood-for-logistic-regression)
 
 
 # 1. Introduction
@@ -24,11 +24,15 @@
 <p align="center">
 <img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151122148-918f21d9-2a19-46cd-a949-f1cbe494e8f6.jpeg"></p>
 
-## 1.3. Objective Function for Logistic Regression
+## 1.3. Maximum Likelihood for Logistic Regression
 - Unlike Linear regression where the **objective function** is MSE, here we will try to Maximise the Log Likelihood (MLE) of the training data
 <p align="center">
 <img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151122463-13f98403-18ad-48b9-8e19-e264a5a786f7.jpeg">
 </p>
-
+<p align="center">
+<img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123199-b135765a-d039-45dd-9bf9-79fe3c9378bb.jpeg">
+</p>
+<img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123217-74c0b726-9d68-45b4-81bb-2733275359e5.jpeg">
+</p>
 
 [(Back to top)](#table-of-contents)
