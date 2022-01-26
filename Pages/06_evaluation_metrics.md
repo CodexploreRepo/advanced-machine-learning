@@ -10,6 +10,7 @@
   - [4.1. Confusion Matrix](#41-confusion-matrix)
   - [4.2. Precision and Recall](#42-precision-and-recall)
   - [4.3. F1 Score](#43-f1-score)
+  - [4.4. ROC](#44-roc)
 
 # 1. Underfitting and Overfitting
 Models can suffer from either:
@@ -170,8 +171,9 @@ confusion_matrix(y_train_5, y_train_perfect_predictions)
 ```
 
 ## 4.2. Precision and Recall
-- **Precision**: accuracy of the positive predictions
-- **Recall**: the ratio of positive instances that are correctly detected by the classifier 
+- **Precision**: How precise is the positive predictions.
+- **Recall**: How many positive cases are deteceted.
+- Exampl of Precision & Recall: For Covid detection, we want to have High Recall, which is to capture as much Positive Cases as Possible by lowering down the threshod. Although, this migh cause Low Precision (i.e: might have quite a number of False Positive cases).
 <p align="center"><img width="250" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/148773812-229be486-9c96-4800-85d2-730621d2441c.png"></p>
 <p align="center"><img width="250" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/148773944-5d15d210-5a4c-4d3c-8947-c6aa681f4b95.png"></p>
 
@@ -200,3 +202,21 @@ confusion_matrix(y_train_5, y_train_perfect_predictions)
 - The F1 score favors classifiers that have similar precision and recall. This is not always what you want: in some contexts you mostly care about precision, and in other contexts you really care about recall. 
   - For example, if you trained a classifier to detect videos that are safe for kids, you would probably prefer a classifier that rejects many good videos (low recall) but keeps only safe ones (high precision), rather than a classifier that has a much higher recall but lets a few really bad videos show up in your product (in such cases, you may even want to add a human pipeline to check the classifier’s video selection). 
   - On the other hand, suppose you train a classifier to detect shoplifters in surveillance images: it is probably fine if your classifier has only 30% precision as long as it has 99% recall (sure, the security guards will get a few false alerts, but almost all shoplifters will get caught).
+
+<p align="center"><img width="650" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151130205-bb186ed2-e1a5-42ef-99e8-6c37c8ab8816.jpeg"></p>
+
+## 4.4. ROC
+- When `thredshod = 0.8`, we can achieve very high precision, but we might left out those positive class but the prob < 0.8, will cause low recall.
+- When `thredshod = 0.2`, we can achieve very high recall (able to detect all positive case), but we might include also those belong to negative class as Positive, causing the low precision.
+
+<p align="center"><img width="650" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151132178-4b0971a2-6472-4445-b226-bf8e2d77a609.jpeg"></p>
+
+- The receiver operating characteristic (ROC) curve is another common tool used with binary classifiers. It is very similar to the precision/recall curve, but instead of plotting precision versus recall, the ROC curve plots the `true positive rate` (another name for recall) against the `false positive rate` (FPR) at **various threshold**. 
+  - The FPR is the ratio of negative instances that are incorrectly classified as positive.
+
+<p align="center"><img width="650" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151135435-cb43a832-a37c-4aec-84f6-35d94310e0fb.jpeg"></p>
+
+- One way to compare classifiers is to measure the area under the curve (AUC). A perfect classifier will have a ROC AUC equal to 1, whereas a purely random classifier will have a ROC AUC equal to 0.5. Scikit-Learn provides a function to compute the ROC AUC:
+
+<p align="center"><img width="650" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151135716-68ac607f-66e9-475d-9daf-a11a1fd0f92a.jpeg"></p>
+
