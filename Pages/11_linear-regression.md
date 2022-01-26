@@ -10,6 +10,8 @@
 - [2. Linear Regression](#2-linear-regression)
   - [2.1. Gradient Descent](#21-gradient-descent)
     - [2.1.1. Batch GD](#211-batch-gd) 
+    - [2.1.2. Stochastic GD](#212-stochastic-gd)
+    - [2.1.3. Mini-batch GD](#213-2.mini-batch-gd)
 - [3. Polynomial Regression](#3-polynomial-regression)
 - [4. Bias-Variance Tradeoff](#4-bias-variance-tradeoff)
 - [5. Regularized Linear Model](#5-regularized-linear-model)
@@ -86,9 +88,12 @@ print(metrics.mean_squared_error(y_test, y_pred))
 <p align="center">
 <img width="850" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151113192-26b12f5e-db1a-4258-88f2-23eb20daeb19.png"></p>
 
-
 - **Gradient Descent** is to measures the local gradient of the cost function with regard to the parameter vector θ, and it goes in the direction of descending gradient. Once the gradient is zero, you have reached a minimum!
--  There are 3 types of GD: `Batch GD`, `Stochastic GD`, `Mini-Batch GD`
+-  There are 3 types of GD: `Batch GD`, `Stochastic GD`, `Mini-Batch GD` via `SGDRegressor` in Sklearn
+
+<p align="center">
+<img width="550" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151119297-61041df8-ee1a-4937-a336-063a230bb0a3.png"></p>
+
 
 ### Convex Function
 - **Convex Function**: *Implies that all local minima are global minima*. It means that, no matter where you start, if the cost function is a convex function, you will end up at the same point, which is the global optima.
@@ -98,7 +103,36 @@ print(metrics.mean_squared_error(y_test, y_pred))
 <img width="350" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151114298-44a963c5-3f21-4548-9ed6-498c96776ad2.jpeg"></p>
 
 ### 2.1.1. Batch GD
+<p align="center">
+<img width="500" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151115457-d142ca97-65c3-4600-9a80-a5f5618569d5.jpeg">
+</p>
 
+- This formula involves calculations over the full training set X, at each Gradient Descent step! This is why the algorithm is called `Batch Gradient Descent`:
+    - it uses the whole batch of training data at every step (actually, Full Gradient Descent would probably be a better name). 
+    - *CONs*: As a result it is terribly **slow on very large training sets** (but we will see much faster Gradient Descent algorithms shortly). 
+    - *PROs*:Gradient Descent **scales well with the number of features**; training a Linear Regression model when there are hundreds of thousands of features is much faster using Gradient Descent than using the Normal Equation or SVD decomposition.
+
+### 2.1.2. Stochastic GD
+<p align="center">
+<img width="500" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151116147-c9fae9c8-3091-47be-baa9-91d0256f5a44.jpeg">
+</p>
+
+```Python
+from sklearn.linear_model import SGDRegressor
+#max_iter=1000, tol=1e-3: runs for maximum 1,000 epochs or until the loss drops by less than 0.001 during one epoch
+#eta0 = 0.1: learning rate, using the default learning schedule (different from the preceding one)
+
+#penalty=None: it does not use any regularization, can change to penalty = 'l1', penalty = 'l2' and add with alpha = 0.001, 
+#please refer Regularization for more information
+
+sgd_reg = SGDRegressor(max_iter=1000, tol=1e-3, penalty=None, eta0=0.1)
+sgd_reg.fit(X, y.ravel())
+```
+
+### 2.1.3. Mini-batch GD
+- At each step, instead of computing the gradients based on the full training set (as in `Batch GD`) or based on just one instance (as in `Stochastic GD`), `Mini-batch GD` computes the gradients on small random sets of instances called **mini-batches**.
+- The main advantage of Mini-batch GD over Stochastic GD is that you can get a performance boost from hardware optimization of matrix operations, especially when using GPUs
+-  Mini-batch GD will end up walking around a bit closer to the minimum than Stochastic GD—but it may be harder for it to escape from local minima (in the case of problems that suffer from local minima, unlike Linear Regression). 
 
 # 3. Polynomial Regression
 - What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
