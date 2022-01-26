@@ -8,6 +8,7 @@
   - [1.3. Explained Variance](#13-explained-variance)
   - [1.4. Mean Absolute Error](#14-mean-absolute-error)
 - [2. Linear Regression](#2-linear-regression)
+  - [2.1. Gradient Descent](#21-gradient-descent) 
 - [3. Polynomial Regression](#3-polynomial-regression)
 - [4. Bias-Variance Tradeoff](#4-bias-variance-tradeoff)
 - [5. Regularized Linear Model](#5-regularized-linear-model)
@@ -75,6 +76,28 @@ print(metrics.explained_variance_score(y_test, y_pred))
 print(metrics.mean_absolute_error(y_test, y_pred))
 print(metrics.mean_squared_error(y_test, y_pred))
 ```
+
+## 2.1. Gradient Descent
+### Gradient Descent introduction
+- `Objective Function` of Linear Regression is **MSE**, which is also called as Cost Function, so our goal (objective) is to minimize the object function. 
+  - Apart from analytical approach (i.e: `Normal Equation` and Scikit-Learn’s LinearRegression class (which is based on `Singular Value Decomposition (SVD)`), we also can consider Iterative approach which is Gradient Descent.
+
+<p align="center">
+<img width="850" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151113192-26b12f5e-db1a-4258-88f2-23eb20daeb19.png"></p>
+
+
+- **Gradient Descent** is to measures the local gradient of the cost function with regard to the parameter vector θ, and it goes in the direction of descending gradient. Once the gradient is zero, you have reached a minimum!
+-  There are 3 types of GD: `Batch GD`, `Stochastic GD`, `Mini-Batch GD`
+
+### Convex Function
+- **Convex Function**: *Implies that all local minima are global minima*. It means that, no matter where you start, if the cost function is a convex function, you will end up at the same point, which is the global optima.
+
+<p align="center">
+<img width="500" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151113847-3c28ddde-370e-47fd-8b00-344e28550266.jpeg">
+<img width="350" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151114298-44a963c5-3f21-4548-9ed6-498c96776ad2.jpeg"></p>
+
+
+
 # 3. Polynomial Regression
 - What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
 - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features. 
