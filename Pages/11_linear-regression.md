@@ -134,6 +134,8 @@ sgd_reg.fit(X, y.ravel())
 - The main advantage of Mini-batch GD over Stochastic GD is that you can get a performance boost from hardware optimization of matrix operations, especially when using GPUs
 -  Mini-batch GD will end up walking around a bit closer to the minimum than Stochastic GD—but it may be harder for it to escape from local minima (in the case of problems that suffer from local minima, unlike Linear Regression). 
 
+[(Back to top)](#table-of-contents)
+
 # 3. Polynomial Regression
 - What if your data is more complex than a straight line? Surprisingly, you can use a linear model to fit nonlinear data. 
 - A simple way to do this is to add powers of each feature as new features, then train a linear model on this extended set of features. 
