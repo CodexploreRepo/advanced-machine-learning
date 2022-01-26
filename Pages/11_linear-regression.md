@@ -8,7 +8,8 @@
   - [1.3. Explained Variance](#13-explained-variance)
   - [1.4. Mean Absolute Error](#14-mean-absolute-error)
 - [2. Linear Regression](#2-linear-regression)
-  - [2.1. Gradient Descent](#21-gradient-descent) 
+  - [2.1. Gradient Descent](#21-gradient-descent)
+    - [2.1.1. Batch GD](#211-batch-gd) 
 - [3. Polynomial Regression](#3-polynomial-regression)
 - [4. Bias-Variance Tradeoff](#4-bias-variance-tradeoff)
 - [5. Regularized Linear Model](#5-regularized-linear-model)
@@ -96,6 +97,7 @@ print(metrics.mean_squared_error(y_test, y_pred))
 <img width="500" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151113847-3c28ddde-370e-47fd-8b00-344e28550266.jpeg">
 <img width="350" alt="Screenshot 2022-01-20 at 16 48 48" src="https://user-images.githubusercontent.com/64508435/151114298-44a963c5-3f21-4548-9ed6-498c96776ad2.jpeg"></p>
 
+### 2.1.1. Batch GD
 
 
 # 3. Polynomial Regression
