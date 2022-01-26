@@ -30,9 +30,14 @@
 <img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151122463-13f98403-18ad-48b9-8e19-e264a5a786f7.jpeg">
 </p>
 <p align="center">
-<img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123199-b135765a-d039-45dd-9bf9-79fe3c9378bb.jpeg">
+<img width="450" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123217-74c0b726-9d68-45b4-81bb-2733275359e5.jpeg">
+<img width="450" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123199-b135765a-d039-45dd-9bf9-79fe3c9378bb.jpeg">
 </p>
-<img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123217-74c0b726-9d68-45b4-81bb-2733275359e5.jpeg">
+
+- Since there is no close-form (analytical) solution for the above objective function, so we will use iterative approach which is Gradient Descent
+<p align="center">
+<img width="600" alt="Screenshot 2022-01-18 at 12 43 11" src="https://user-images.githubusercontent.com/64508435/151123912-46f09e5f-72e9-44b1-a9da-0b89ece6a129.jpeg">
 </p>
+
 
 [(Back to top)](#table-of-contents)
