@@ -220,3 +220,24 @@ confusion_matrix(y_train_5, y_train_perfect_predictions)
 
 <p align="center"><img width="650" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151135716-68ac607f-66e9-475d-9daf-a11a1fd0f92a.jpeg"></p>
 
+```Python
+from sklearn import metrics
+
+y_pred_prob = estimator.predict_proba(x_test)
+# keep probabilities for the positive class only
+y_pred_prob = y_pred_prob[:, 1]
+# calculate the ROC curve
+fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_prob)
+# Calculate AUC
+print('AUC:', metrics.roc_auc_score(y_test, y_pred_prob)) #AUC: 0.9745331069609507
+
+plt.plot([0, 1], [0, 1], ls = '--')
+plt.plot(fpr, tpr, marker = '.')
+plt.xlabel('FPR')
+plt.ylabel('TPR')
+plt.title('ROC Curve')
+plt.show()
+```
+
+<p align="center"><img width="500" alt="Screenshot 2021-08-15 at 16 25 45" src="https://user-images.githubusercontent.com/64508435/151136755-4eb8f2d3-1cbb-45df-9dce-7a5dc5cad778.png"></p>
+plt.ylabel('TPR')
