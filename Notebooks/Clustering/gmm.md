@@ -73,12 +73,22 @@
 </p>
 
 ## 3.2. EM Algorithm for Clustering
+- Expectation-Maximization (EM) algorithm, which has many similarities with the K-Means algorithm: it also initializes the cluster parameters randomly, &#8594; it repeats two steps until convergence, first assigning instances to clusters (this is called the expectation step) &#8594; updating the clusters (this is called the maximization step).
+- Unlike K-Means, though, EM uses *soft cluster assignments*, not hard assignments. 
+  - For each instance, during the expectation step, the algorithm estimates the probability that it belongs to each cluster (based on the current cluster parameters). 
+  - Then, during the maximization step, each cluster is updated using **all the instances in the dataset**, with each instance weighted by the estimated probability that it belongs to that cluster. 
+  - These probabilities are called the *responsibilities of the clusters* for the instances.
+  - During the maximization step, each cluster’s update will mostly be impacted by the instances it is most responsible for.
 ```
 Repeat
   - E-Step: Estimate membership of each data points 
   - M-Step: Estimate the cluster centers (and prior) 
 Until convergence
 ```
+
+<p align="center">
+<img src="https://miro.medium.com/max/1210/1*RIHS9QCl8p-NEmUwxFaK-A.gif" width="500" />
+</p>
 
 ### 3.2.1. E-Step
 - E-Step (Expectation step): to estimate membership
