@@ -37,15 +37,14 @@
 <img src="https://user-images.githubusercontent.com/64508435/162023597-371ba52e-c3a2-430a-91f9-12e780944b4d.png" width="800" />
 </p>
 
-  - **GMM in 2-Dimension**: say petal width and petal length
+  - **GMM in 2-Dimension**: say petal width and petal length and now the constituents of the mixture are the following:
 <p align="center">
 <img src="https://user-images.githubusercontent.com/64508435/162024102-8afd53a9-4691-4050-8b76-9f8d709aed46.png" width="400" />
 <img src="https://user-images.githubusercontent.com/64508435/162024215-108a7365-e2d7-4473-b1b7-0ff9368ada08.png" width="800" />
 </p>
 
-
 # 3. Expectation-Maximization Process
-
+## 3.1. Maximum Log-likelihood (MLE)
 
 
 # Resources
