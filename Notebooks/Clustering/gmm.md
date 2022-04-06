@@ -6,6 +6,7 @@
 - [2. GMM Example](#2-gmm-example)
 - [3. Expectation-Maximization Process](#3-expectation-maximization-process)
   - [3.1. Maximum Log-Likelihood ](#31-maximum-log-likelihood) 
+  - [3.2. EM Algorithm for Clustering](#32-em-algorithm-for-clustering)
 - [Resources](#resources)
 
 # 1. Introduction
@@ -20,6 +21,12 @@
 </p>
 
 - There are several GMM variants. In the simplest variant, implemented in the GaussianMixture class, you **must know in advance the number k** of Gaussian distributions.
+## 1.1. Hard vs Soft Clustering
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64508435/162028394-59838624-418b-47dc-879f-70ed206d4242.png" width="400" />
+</p>
+
+
 
 [(Back to top)](#table-of-contents)
 
@@ -65,6 +72,21 @@
 <img src="https://user-images.githubusercontent.com/64508435/162026136-33088aec-60b1-454e-a8a0-2c110df07b51.png" width="600" />
 </p>
 
+## 3.2. EM Algorithm for Clustering
+```
+Repeat
+  - E-Step: Estimate membership of each data points 
+  - M-Step: Estimate the cluster centers (and prior) 
+Until convergence
+```
+
+### 3.2.1. E-Step
+- E-Step (Expectation step): to estimate membership
+  - Initially, we can randomly assign the cluster for each membership
+  - The probability of the observation belonging to the cluster `E(Zij) = p(Kj|xi)`, would be the ratio between the Gaussian value and the sum of all the Gaussians (Z). 
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64508435/162027354-a37aa048-3f85-478c-b570-eaf2996dff04.png" width="600" />
+</p>
 
 
 # Resources
