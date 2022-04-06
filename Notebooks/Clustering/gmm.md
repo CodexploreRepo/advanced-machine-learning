@@ -5,6 +5,7 @@
 - [1. Introduction](#1-introduction)
 - [2. GMM Example](#2-gmm-example)
 - [3. Expectation-Maximization Process](#3-expectation-maximization-process)
+  - [3.1. Maximum Log-Likelihood ](#31-maximum-log-likelihood) 
 - [Resources](#resources)
 
 # 1. Introduction
@@ -45,7 +46,7 @@
 [(Back to top)](#table-of-contents)
 
 # 3. Expectation-Maximization Process
-## 3.1. Maximum Log-likelihood (MLE)
+## 3.1. Maximum Log-likelihood 
 - So how does the algorithm finds the best set of parameters to describe the mixture? Well, we start by defining the probability model. 
 - The probability of observing any observation, that is the **probability density**, is a weighted sum of K Gaussian distributions.
 <p align="center">
@@ -57,7 +58,14 @@
 <img src="https://user-images.githubusercontent.com/64508435/162025524-892ab830-29c1-4095-92c9-936d3d518a95.png" width="350" /><br>
 <img src="https://user-images.githubusercontent.com/64508435/162025576-b898ea7f-99d1-4a81-b360-a671a3a0c26e.png" width="550" />
 </p>
+  
   - where `k`: number of clusters and `i` are all observing data points 
+- Instead of the likelihood, we usually maximize the log-likelihood, in part because it turns the product of probabilities into a sum (simpler to work with).
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64508435/162026136-33088aec-60b1-454e-a8a0-2c110df07b51.png" width="600" />
+</p>
+
+
 
 # Resources
 
