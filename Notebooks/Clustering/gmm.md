@@ -88,6 +88,13 @@ Until convergence
 <img src="https://user-images.githubusercontent.com/64508435/162027354-a37aa048-3f85-478c-b570-eaf2996dff04.png" width="600" />
 </p>
 
+### 3.2.2. M-Step
+- M-Step (Maximization step): Estimate cluster parameters
+<p align="center">
+<img src="https://user-images.githubusercontent.com/64508435/162029156-6a6cfecb-3d8d-4d80-9138-5244e8f12914.png" width="600" />
+</p>
+
+
 
 # Resources
 
