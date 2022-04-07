@@ -39,7 +39,7 @@
 - Given a dataset X, a common task is to try to estimate the most likely values for the model parameters. 
 - To do this, you must find the values that maximize the likelihood function, given X. 
   - In the above example, if you have observed a single instance x=2.5, the maximum likelihood estimate (MLE) of θ=-2.15 when θ=1.5.
-- Notice that maximizing the likelihood function is equivalent to maximizing its logarithm
+- Notice that maximizing the likelihood function is equivalent to maximizing its **logarithm**
   - Indeed the logarithm is a strictly increasing function, so if θ maximizes the log likelihood, it also maximizes the likelihood. It turns out that it is generally easier to maximize the log likelihood.
   
 ## 1.4. Maximum A Posteriori Estimation
