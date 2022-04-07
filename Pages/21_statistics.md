@@ -5,6 +5,8 @@
 - [1. Probability vs Likelihood](#1-probability-vs-likelihood)
   - [1.1. Example for Probability vs Likelihood](#11-example-for-probability-vs-likelihood)
   - [1.2. PDF vs Likelihood Function](#12-pdf-vs-likelihood-function)
+  - [1.3. Maximum Likelihood Estimate (MLE)](#13-maximum-likelihood-estimate)
+  - [1.4. Maximum A Posteriori (MAP) Estimation](#14-maximum-a-posteriori-estimation)
 
 # 1. Probability vs Likelihood
 - The terms “probability” and “likelihood” are often used interchangeably in the English language, but they have very different meanings in statistics.
@@ -28,5 +30,20 @@
 </p>
 
 ## 1.2. PDF vs Likelihood Function
+- **Probability Density Function (PDF)** is a function of x (with θ fixed)
+  - if you integrate a probability distribution over all possible values of x, you always get 1.
+- **Likelihood Function** is a function of θ (with x fixed). 
+  - It is important to understand that the *likelihood function is not a probability distribution*: if you integrate the likelihood function over all possible values of θ, the result can be any positive value.
+ 
+ ## 1.3. Maximum Likelihood Estimate
+- Given a dataset X, a common task is to try to estimate the most likely values for the model parameters. 
+- To do this, you must find the values that maximize the likelihood function, given X. 
+  - In the above example, if you have observed a single instance x=2.5, the maximum likelihood estimate (MLE) of θ=-2.15 when θ=1.5.
+- Notice that maximizing the likelihood function is equivalent to maximizing its logarithm
+  - Indeed the logarithm is a strictly increasing function, so if θ maximizes the log likelihood, it also maximizes the likelihood. It turns out that it is generally easier to maximize the log likelihood.
+  
+## 1.4. Maximum A Posteriori Estimation
+- Maximum a-Posteriori (MAP) estimation: If a prior probability distribution **g** over θ exists, it is possible to take it into account by maximizing `ℒ(θ|x)g(θ)` rather than just maximizing `ℒ(θ|x)`. 
+- Since MAP constrains the parameter values, you can think of it as a regularized version of MLE.
 
 [(Back to top)](#table-of-contents)
