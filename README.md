@@ -15,7 +15,7 @@
 
 ## Part B. Machine Learning Models
 - [1. Linear Regression](./Pages/11_linear-regression.md)
-- [2. Logistic Regression](./Pages/12_logistic_regression.md) used for Classification problems
+- [2. Logistic Regression](./Pages/12_logistic_regression.md) 
 - [3. Bayes Learning](./Pages/13_bayes_learning.md)
 - [4. Ensemble methods](./Pages/11_ensemble_method.md)
 
