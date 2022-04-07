@@ -17,8 +17,11 @@
 - [1. Linear Regression](./Pages/11_linear-regression.md)
 - [2. Logistic Regression](./Pages/12_logistic_regression.md) used for Classification problems
 - [3. Bayes Learning](./Pages/13_bayes_learning.md)
-- [1. Ensemble methods](./Pages/11_ensemble_method.md)
+- [4. Ensemble methods](./Pages/11_ensemble_method.md)
 
+## Part C. Interview Questions
+- [1. Statistics](./Pages/21_statistics.md)
+- [2. Technical Terms](./Pages/22_techinical_terms.md)
 # Resources
 - [Hands-On Machine Learning with Scikit-Learn and TensorFlow](https://github.com/ageron/handson-ml)
 - [Essence of Linear Algebra](https://www.youtube.com/watch?v=k7RM-ot2NWY&list=RDCMUCYO_jab_esuFRV4b17AJtAw)
