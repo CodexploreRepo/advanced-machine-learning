@@ -50,6 +50,7 @@
 <img src="https://user-images.githubusercontent.com/64508435/162024102-8afd53a9-4691-4050-8b76-9f8d709aed46.png" width="400" />
 <img src="https://user-images.githubusercontent.com/64508435/162024215-108a7365-e2d7-4473-b1b7-0ff9368ada08.png" width="800" />
 </p>
+
 [(Back to top)](#table-of-contents)
 
 # 3. Expectation-Maximization Process
